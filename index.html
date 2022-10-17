@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Album de Minecraft</title>
+</head>
+
+<body style="text-align:center; background-color: rgba(94, 241, 94, 0.767);">
+    <h1>Album de Minecraft</h1>
+    <br>
+    <img src="logo Minecraft.png" id="m-img" width="450px" height="450px">
+    <p id="m-text" style="font-size:15px;">Minecraft</p>
+    <br>
+    <button onclick="update()"
+        style="border: width 1px; background-color:rgb(30, 218, 30); border-color:darkgreen; border-radius: 5px;">Próximo Item</button>
+    <script>
+        var item = ["grass_block", "creeper", "enderman", "craft_table", "tree", "pig", "steve"];
+        var img = ["grass_block.png", "creeper.png", "enderman.png", "craft_table.png", "tree.png", "pig.png", "steve.png"];
+        var n = 0;
+        function update(){
+            n++;
+            if (n == item.length){
+                n = 0;
+            }
+            document.getElementById("m-text").innerHTML = item[n];
+            document.getElementById("m-img").src=img[n];
+        }
+    </script>
+</body>
+
+</html>
